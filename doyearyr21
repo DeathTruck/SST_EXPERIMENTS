@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+#
+q2="2011"
+echo $models
+echo $q1
+echo $q2
+YEAR=1953
+YEAR2=1993
+echo $YEAR
+echo $year
+
+while [ $YEAR -le $YEAR2 ] ; do
+
+echo $YEAR
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.01.grib ${YEAR}010100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.02.grib ${YEAR}020100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.03.grib ${YEAR}030100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.04.grib ${YEAR}040100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.05.grib ${YEAR}050100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.06.grib ${YEAR}060100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.07.grib ${YEAR}070100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.08.grib ${YEAR}080100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.09.grib ${YEAR}090100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.10.grib ${YEAR}100100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.11.grib ${YEAR}110100
+/home/ccr-01/buenning/test06/libs/etc/force_grib_date_mon sst21.$YEAR.12.grib ${YEAR}120100
+
+YEAR=`expr $YEAR \+ 1`
+done
+echo $year
+echo here I am

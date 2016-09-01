@@ -1,0 +1,1 @@
+~/cdo/cdo1.5.2a/bin/cdo -f grb copy sst21.new.nc sst21.grb
