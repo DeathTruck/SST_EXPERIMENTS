@@ -10,7 +10,7 @@ nlats=n_elements(lat)
 print, lon, lat
 time = nc_get(a,'time')
 contour, temp[*,*,0], lon, lat, levels = 250+findgen(50),/cell_fill
-map_world,/over,/continents
+; map_world,/over,/continents
 help, temp
 dum = temp
 dumlat = lat
@@ -39,10 +39,10 @@ window, 1
 firstanom = firstanom[*,1:nlats2-2]
 lat2 = lat2[1:nlats2-2]
 contour,  firstanom, lon2, lat2, levels = -0.8 + findgen(17)/16.0 * 1.6 ,/cell_fill
-map_world,/over,/continents
+; map_world,/over,/continents
 window, 2
  contour,  dumanom, lon, lat, levels = -0.8 + findgen(17)/16.0 * 1.6 ,/cell_fill
-map_world,/over,/continents
+; map_world,/over,/continents
 
 ;;;;;;;;;flip
 newanom = dumanom*0.0
@@ -64,7 +64,7 @@ endfor
 
 window, 3
  contour,  newanom, lon, lat, levels = -0.8 + findgen(17)/16.0 * 1.6 ,/cell_fill
-map_world,/over,/continents
+; map_world,/over,/continents
 
 ;;;;;;;;; get rid of low correlations
 ; newanom = newanom * (abs(newanom) gt 0.1)
@@ -79,11 +79,11 @@ endfor
 
 window, 4
 contour, SST[*,*,0], lon, lat, levels = 250+findgen(50),/cell_fill
-map_world,/over,/continents
+; map_world,/over,/continents
 
-normal
+; normal
 contour, SST[*,*,0]-SSTold, lon, lat, levels = -2.0 + findgen(21)/20.0*4.0,/cell_fill
-map_world,/over,/continents
+; map_world,/over,/continents
 device,/close
 
 
